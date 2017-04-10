@@ -8,6 +8,9 @@ $(document).ready(function() {
   // We did the first one for you. You can use the `.click()` function or
   // the .on('click') like we did below.
   $( '#fadeDiv' ).on( 'click', fadeCat);
+  $( '#hideDiv' ).on('click', hideCat);
+  $( '#animateDiv' ).on('click', animateCat);
+  $( '#resetDiv' ).on('click', resetCat);
 });
 
 // nav bar function to fade when mouse enters button
@@ -27,6 +30,8 @@ function fadeCat() {
   //TODO your function code here
   // toggle catImg fade
   // append '<p>fade toggle</p>' to 'clickList'
+  $('#catImg').fadeToggle('fast');
+  $('#clickList').append('<p>fade toggle</p>');
 
 }
 
@@ -35,6 +40,8 @@ function hideCat() {
   //TODO your function code here
   // hide catImg
   // append '<p>hide toggle</p>' to 'clickList'
+  $('#catImg').toggle('fast');
+  $('#clickList').append('<p>hide toggle</p>');
 }
 
 // animateCat is a function to grow the cat's height and width by 10px when that button is clicked
@@ -42,6 +49,8 @@ function animateCat() {
   //TODO your function code here
   // animate catImg
   // append '<p>animate</p>' to 'clickList'
+  $('#catImg').animate({height: '+=10px', width: '+=10px'});
+  $('#clickList').append('<p>animate</p>');
 }
 
 // Hard Mode
@@ -50,4 +59,6 @@ function animateCat() {
 function resetCat() {
   // reset catImg
   // append '<p>reset</p>' to 'clickList'
+  $('#clickList').append('<p>reset</p>');
+  $('#catImg').removeAttr('style');
 }
