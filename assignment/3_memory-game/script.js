@@ -18,9 +18,9 @@ function revealHide() {
 
   //TODO add your code here to get the desired functionality
   if ($('.cardImg').is(':visible')) {
-    $('.cardImg').fadeOut(1);
+    $('.cardImg').hide();
   } else {
-    $('.cardImg').fadeIn(1);
+    $('.cardImg').toggle();
   }// end if statement
 }// end revealHide
 
@@ -29,8 +29,8 @@ function singleClickFunc() {
 
   //TODO add your code here to get the desired functionality
   if ($(this).children('.cardImg').is(':visible')) {
-    $(this).children('.cardImg').fadeOut(1);
+    $(this).children('.cardImg').hide();
   } else {
-    $(this).children('.cardImg').fadeIn(1);
+    $(this).children('.cardImg').toggle();
   }// end if statement
 }// end singleClickFunc
